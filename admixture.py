@@ -33,7 +33,7 @@ class Admixture():
 		#for each k value
 		for i in ks:
 			for j in range(self.rep):
-				command_string = "admixture -j" + str(self.NP) + " -c " + str(self.stop) + " -s " + str(np.random.randint(1000000)) + " --cv=" + str(self.cv) + " " + self.prefix + ".ped " + str(i)
+				command_string = "admixture -j" + str(self.NP) + " -C " + str(self.stop) + " -s " + str(np.random.randint(1000000)) + " --cv=" + str(self.cv) + " " + self.prefix + ".ped " + str(i)
 				
 				#call Admixture
 				admixtureCall = SysCall(command_string)
